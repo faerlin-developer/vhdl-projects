@@ -1,6 +1,6 @@
 # __VHDL Projects__
 
-These are two projects that I worked in [CKRE-110 Digital Logic and Hardware Architecture](https://continuing.torontomu.ca/search/publicCourseSearchDetails.do?method=load&courseId=26179), an introductory course in logic design, Boolean algebra and modelling in VHDL. 
+These are two projects that I worked on while taking [CKRE-110 Digital Logic and Hardware Architecture](https://continuing.torontomu.ca/search/publicCourseSearchDetails.do?method=load&courseId=26179), an introductory course in logic design, Boolean algebra and modelling in VHDL. 
 
 The description language used for modelling the circuits is VHDL, which are then synthesized and implemented on the [Basys 3 Artix-7 FPGA](https://digilent.com/reference/programmable-logic/basys-3/start) development board.
 
