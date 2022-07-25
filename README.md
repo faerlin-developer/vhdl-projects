@@ -26,6 +26,11 @@ Lastly, although not shown in the diagrams, the components are synchronized with
 
 ## __Display a Counter Incrementing at 1 Hz__
 
-The digital circuit described in the `counter_incrementing_at_1Hz` folder displays a counter on the 7-segment display that updates at a frequency of exactly `1 Hz`. That is, it displays the increments once per second. The counter counts from `0x0` to `0xF` then loops around.
+The digital circuit described in the `counter_incrementing_at_1Hz` folder displays a counter on the 7-segment display that updates at a frequency of exactly `1 Hz`. That is, the display increments once per second. The counter counts from `0x0` to `0xF` then loops around.
 
-The Basys3 comes with a single oscillator that provides a `100 MHz` clock signal. To achieve a frequency of 1 Hz from thsi clock signal, two internal counters were used. The first internal counter divides the 100 MHz by half seven times. This results to a frequency of `781250 Hz`, which corresponds to a period of `1.28e-6 s`. It takes exactly `390625` complete cycles of this signal for `0.5 s` to elapse. The second internal counter takes this signal produces a signal that alternate after every 390625 complete cycles. This results to an output signal with a period of `1.0 s`, which corresponds to a frequency of `1 Hz`.
+The Basys3 comes with a single oscillator that provides a `100 MHz` clock signal. To achieve a frequency of 1 Hz from this signal, two internal counters were used. The first internal counter divides the 100 MHz frequency by half seven times. This results to a frequency of `781250 Hz`, which corresponds to a period of `1.28e-6 s`. It takes exactly `390625` complete cycles of this signal for `0.5 s` to elapse. The second internal counter takes the output signal from the first counter and counts `390625` complete cycles. It produces a signal that alternate after every `390625` complete cycles. This results to an output signal with a period of `1.0 s`, which corresponds to a frequency of `1 Hz`.
+
+## __Built With__
+- VHDL
+- [Basys 3 Artix-7 FPGA](https://digilent.com/reference/programmable-logic/basys-3/start)
+- [Vivado - Xilinx](https://www.xilinx.com/products/design-tools/vivado.html)
